@@ -16,9 +16,10 @@ router.get('/person', function(req, res, next){
 })
 
 router.get('/person/:id', function(req, res, next) {
+    console.log('test',+req.params.id);
     res.status(200);
     res.send(data.filter(person => {
-        return person.id === req.params.id;
+        return person.id == req.params.id;
     }))
 })
 
