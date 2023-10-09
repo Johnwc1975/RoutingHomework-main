@@ -18,7 +18,7 @@ router.get('/person', function(req, res, next){
 router.get('/person/:id', function(req, res, next) {
     res.status(200);
     res.send(data.filter(person => {
-        person.id === req.params.id;
+        return person.id === req.params.id;
     }))
 })
 
