@@ -24,6 +24,7 @@ router.get('/person/:id', function(req, res, next) {
 })
 
 router.post('/person', function(req, res, next) {
+    // note we are adding any data sent to the endpoint to the array. this really needs some checking.
     res.status(200);
     data.push(req.body);
     res.send(req.body);
