@@ -35,7 +35,7 @@ router.put('/person/:id', function(req, res, next) {
     res.status(200);
     
     var index = data.indexOf(person => {
-        return person.id===req.params.id;
+        return person.id==req.params.id;
     })
     data[index]=req.body;
     res.send(data[index]);
